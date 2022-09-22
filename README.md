@@ -32,3 +32,51 @@ def calPoints(ops) -> int:
   return result
 ```
 ## Solution in Python 3
+```
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Sep  7 19:06:11 2022
+
+@author: sd
+"""
+record = []
+ops = ["5","-2","4","C","D","+"]
+x = int() #record a new score of x
+#"+" record a new score, the sum of the previous 2 scores
+#"D" - record a new score that is double the previous score
+#"C" - remove the previous score from the record.
+i  = 0
+
+while i < len(ops):
+    op = ops[i]
+    print('op ' +op)
+    
+    if op == "D":
+        index = len(record) - 1
+        prev = int(record[index])
+        score = prev * 2
+        record.append(score)
+        
+    elif op == "+":
+        index1 = len(record) - 1
+        index2 = len(record) -2
+        
+        score = int(record[index1]) + int(record[index2])
+        record.append(score)
+                           
+    elif op == "C":
+        if len(record) >= 2:
+            record.pop(-1)
+            
+    else:
+        score = int(ops[i])
+        record.append(score)      
+        
+    i = i + 1
+result = 0
+
+for i in record:
+    result += i
+return result
+```
