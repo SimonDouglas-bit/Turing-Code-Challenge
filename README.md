@@ -6,7 +6,7 @@ You're required to develop a game with weird rules where the scores of past roun
 2. ```x```- Record a new score that is the sum of the previous two scores. It is guaranteed there will always be two previous scores.
 3. ```D``` - Record a new score that is double the previous score. It is guaranteed there will always be two previous scores.
 4. ```C``` Invalidate the previous score, removing it from the record. It is guaranteed there will always be a previous score.
-Return * the sum of all the scores on the record. *
+Return *the sum of all the scores on the record.*
 
 ### Example:
 ```
@@ -20,3 +20,15 @@ Explanation:
 "+" - Add 5 + 10 = 15 to the record, record is now [5, 10, 15].
 The total sum is 5 + 10 + 15 = 30
 ```
+### Instructions
+Use the following function code snippet:
+```
+def calPoints(ops) -> int:
+  record = []
+  """
+  Your code
+  """
+  result = None
+  return result
+```
+## Solution in Python 3
